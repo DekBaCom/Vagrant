@@ -4,3 +4,5 @@ Cmder.exe
 .Vagrant
 vm-ubuntu/.Vagrant
 vm-windowsserver2016/.Vagrant
+Cmder
+cmder/
