@@ -6,9 +6,27 @@ Create Folder
 ```bash
   mkdir FolderExample
 ```
+## Check version
+
+```bash
+  vagrant --version
+```
 ## Build and runing Vagrant
-Code example 
 
 ```bash
   vagrant up
+```
+or 
+```bash
+  vagrant up  --provider hyperv
+```
+
+## Delete or Destroy
+
+```bash
+  vagrant destroy
+```
+or  force delete and auto approve 
+```bash
+  vagrant destroy -f
 ```
