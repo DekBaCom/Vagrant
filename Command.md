@@ -6,6 +6,17 @@ Create Folder
 ```bash
   mkdir FolderExample
 ```
+
+## Initialize the project
+
+```bash
+  vagrant init
+```
+Example
+```bash
+  vagrant init hashicorp/bionic64
+```
+
 ## Check version
 
 ```bash
