@@ -70,3 +70,18 @@ or  force delete and auto approve
 ```bash
   vagrant destroy -f
 ```
+
+## Teardown an 
+
+Suspending the virtual machine will stop it and save its current running state. Suspend the machine now.
+```bash
+  vagrant suspend
+```
+When you begin working again bring the machine back up and its state resumes from where you left off. Start the machine again.
+```bash
+  vagrant up
+```
+Halting the virtual machine will gracefully shut down the guest operating system and power down the guest machine. Halt your machine now.
+```bash
+  vagrant halt
+```
