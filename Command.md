@@ -48,7 +48,7 @@ end
 ```
 ## List image 
 ```bash
-  Vagrant list
+  vagrant box list
 ```
 ## Remove the box
 ```bash
