@@ -46,7 +46,10 @@ example 3
   config.vm.box_url = "https://vagrantcloud.com/hashicorp/bionic64"
 end
 ```
-
+## List image 
+```bash
+  Vagrant list
+```
 ## Remove the box
 ```bash
 vagrant box remove hashicorp/bionic64
@@ -71,7 +74,7 @@ or  force delete and auto approve
   vagrant destroy -f
 ```
 
-## Teardown an 
+## Teardown an Environment
 
 Suspending the virtual machine will stop it and save its current running state. Suspend the machine now.
 ```bash
