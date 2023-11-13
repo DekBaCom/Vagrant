@@ -6,7 +6,11 @@ Create Folder
 ```bash
   mkdir FolderExample
 ```
+## Check version
 
+```bash
+  vagrant --version
+```
 ## Initialize the project
 
 ```bash
@@ -16,11 +20,36 @@ Example
 ```bash
   vagrant init hashicorp/bionic64
 ```
-
-## Check version
-
+## Install a Box (Optional)
+- [Vagrant Box for find image](https://app.vagrantup.com/boxes/search)
 ```bash
-  vagrant --version
+  vagrant box add hashicorp/bionic64
+```
+Use Box
+example 1
+```bash
+  Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+end
+```
+example 2
+```bash
+  Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+  config.vm.box_version = "1.0.282"
+end
+```
+example 3
+```bash
+  Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp/bionic64"
+  config.vm.box_url = "https://vagrantcloud.com/hashicorp/bionic64"
+end
+```
+
+## Remove the box
+```bash
+vagrant box remove hashicorp/bionic64
 ```
 ## Build and runing Vagrant
 
