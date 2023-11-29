@@ -6,3 +6,11 @@ vm-ubuntu/.Vagrant/
 vm-windowsserver2016/.Vagrant
 Cmder
 cmder/
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+vm-ubuntu-auto-install-module/.Vagrant
+vm-windowsserver2016/.Vagrant
+Lab-ADDS-Clients/.Vagrant
