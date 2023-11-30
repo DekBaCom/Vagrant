@@ -1,6 +1,6 @@
 .Vagrantfile
 Cmder.exe
-.Vagrant
+.Vagrant/
 vm-ubuntu-auto-install-module/.Vagrant/
 vm-ubuntu/.Vagrant/
 vm-windowsserver2016/.Vagrant/
