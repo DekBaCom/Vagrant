@@ -1,0 +1,32 @@
+Vagrant.configure("2") do |config|
+  # Configuration for Windows active directory 
+  config.vm.define "ADDS01" do |ad|
+    ad.vm.box = "gusztavvargadr/windows-server-2019-standard"
+    #ComputerName
+    ad.vm.hostname = "ADDS01"
+    ad.vm.network "public_network", type: "hyperv", bridge: "External"
+    config.vm.synced_folder ".", "/vagrant", disabled: true
+    # Run as Hyper
+    ad.vm.provider "hyperv" do |hv|
+      hv.vmname = "ADDS01"
+      hv.cpus = 2
+      hv.memory = 2048
+    end
+    config.vm.provision "shell", path: "Enable-ADDS-Timezone-EDGE.ps1"
+    
+  end
+
+  # Configuration for Windows client
+  config.vm.define "windows_vm01" do |windows|
+    windows.vm.box = "man715/Windows10"
+    windows.vm.hostname = "GuestPC01"
+    windows.vm.network "public_network", type: "hyperv", bridge: "External"
+    config.vm.synced_folder ".", "/vagrant", disabled: true
+    windows.vm.provider "hyperv" do |win|
+      win.vmname = "GuestPC01"
+      win.cpus = 2
+      win.memory = 1024
+    end
+    config.vm.provision "shell", path: "set-timezone.ps1"
+  end
+end

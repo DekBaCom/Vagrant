@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/ubuntu1804"
+    config.vm.network "forwarded_port", guest: 8000, host: 8000
+    config.vm.provider "hyperv" do |vb| vb.memory = "1024"
+ end
+  #config.vm.provision :shell, path: "simple-install-nginx.ps", privileged: false
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update
+    apt-get install -y git
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+    apt-get install -y nodejs
+    apt-get install -y build-essential
+    npm install -g npm
+    apt-get update
+    apt-get upgrade -y
+    apt-get autoremove -y
+  SHELL
+end
