@@ -2,7 +2,7 @@
 ![Logo](https://tech.osteel.me/images/2015/01/25/vagrant.png)
 
 ## Library
- - [All command for Vagrant manage  ](https://github.com/DekBaCom/Vagrant/blob/main/Command.md)
+ - [All command for Vagrant manage  ](https://github.com/DekBaCom/Vagrant/blob/main/doc/Command.md)
 
 ## Program 
  - [Vagrant](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant)
