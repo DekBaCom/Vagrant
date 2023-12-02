@@ -29,7 +29,7 @@ end
       hv.cpus = 2
       hv.memory = 2048
     end
-    config.vm.provision "shell", path: "Enable-ADDS-Timezone-EDGE.ps1"
+    config.vm.provision "shell", path: "Enable-ADDS-Timezone.ps1"
     
   end
 
