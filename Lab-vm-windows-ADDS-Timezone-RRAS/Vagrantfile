@@ -11,8 +11,10 @@ config.vm.define "RRAS01" do |rras|
     hv.vmname = "RRAS01"
     hv.cpus = 2
     hv.memory = 2048
+
   end
-  config.vm.provision "shell", path: "Enable-RRAS-Timezone.ps1"
+  config.vm.provision "shell", path: "set-timezone.ps1"
+  
   
 end
 

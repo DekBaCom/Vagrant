@@ -1,9 +1,17 @@
-# Install the Active Directory Domain Services role
-#Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+# Install the Remote Access feature
+Install-WindowsFeature -Name RemoteAccess -IncludeManagementTools
 
-# Promote the server to a domain controller
-#Install-ADDSForest -DomainName demodomain.local -DomainMode 7 -ForestMode 7 -InstallDns -Force
+# Import the Remote Access module
+Import-Module RemoteAccess
 
+# Configure RRAS
+Install-RemoteAccess -VpnType VpnS2S # You can customize the VpnType parameter based on your specific requirements
+
+# Start the RRAS service
+Start-Service RemoteAccess
+
+# Set RRAS to start automatically
+Set-Service RemoteAccess -StartupType Automatic
 
 # Set the time zone to UTC (replace with your desired time zone)
 $timezone = "SE Asia Standard Time"
